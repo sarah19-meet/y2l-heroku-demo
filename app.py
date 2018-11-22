@@ -1,10 +1,12 @@
 from flask import Flask
+from Flask import render_template
 app = Flask(__name__)
 
-@app.route('/edits')
-def hello_world():
+@app.route('/')
+def new_app():
     return render_template("edits.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
+
 
